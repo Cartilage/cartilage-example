@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Cartilage for Backbone.js and Bootstrap</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <!-- Expand Collapsed Navigation -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <%= link_to "Cartilage", root_path, :class => :brand %>
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li id="nav-about" class="active"><a href="#about">About Cartilage</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="content" class="container-absolute">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
