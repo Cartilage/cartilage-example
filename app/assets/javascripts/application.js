@@ -18,4 +18,8 @@
 //
 //= require cartilage
 //
+//= require example
+//
+//= require_tree ../templates
+//
 //= require_tree .

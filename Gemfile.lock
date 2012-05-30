@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:activeprospect/cartilage.git
-  revision: 3883fa11875f39a38749eef4fe1088f15ed7df5d
+  revision: cb11c8771e6660abddfa47ccaa41b0fb352994f0
   specs:
     cartilage (0.0.1)
       bootstrap-sass
@@ -48,6 +48,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    ejs (1.0.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -122,6 +123,7 @@ DEPENDENCIES
   bootstrap-sass
   cartilage!
   coffee-rails (~> 3.2.1)
+  ejs
   jquery-rails
   pg
   rails (= 3.2.3)

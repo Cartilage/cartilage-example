@@ -5,6 +5,7 @@
     <title>Cartilage for Backbone.js and Bootstrap</title>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <%= yield :javascript %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -26,6 +27,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li id="nav-about" class="active"><a href="#about">About Cartilage</a></li>
+              <li id="nav-components" class="active"><a href="#components">Components</a></li>
             </ul>
           </div>
 
