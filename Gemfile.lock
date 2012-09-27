@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Cartilage/cartilage.git
+  remote: git://github.com/Cartilage/cartilage.git
   revision: 46524b185b0305124221cc03d84cc9f4534ed608
   specs:
     cartilage (0.0.1)
