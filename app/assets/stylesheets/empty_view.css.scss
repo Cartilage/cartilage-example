@@ -1,0 +1,26 @@
+.empty-view 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 4px;
+  bottom: 4px;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.45;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -256px;
+    margin-top: -256px;
+    opacity: 0.15;
+  }
+}

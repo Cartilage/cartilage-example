@@ -1,0 +1,156 @@
+@import "cartilage/mixins";
+
+#content {
+  > div.photos-view
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    > .filter-toolbar
+    {
+      position: absolute;
+      top: 48px;
+      left: 0;
+      right: 0;
+      height: 48px;
+
+      @include user-select(none);
+
+      &:after
+      {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        border-top: 1px solid rgb(196, 198, 200);
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        border-bottom: 1px solid rgb(239, 241, 241);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      }
+
+      > ul
+      {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        > li
+        {
+          position: relative;
+          float: right;
+          height: 48px;
+          padding: 0;
+          margin: 0;
+          margin-right: 25px;
+          line-height: 48px;
+
+          input[type=search]
+          {
+            margin-top: 10px;
+          }
+
+          &.sort-item
+          {
+            margin-top: 10px;
+            }
+
+          &.navigate-folder {
+            margin: 0px 0px 0px 25px;
+            float: left;
+
+            fieldset {
+              width: 270px;
+
+            }
+
+            .folders-view {
+              margin-top: 10px; 
+            }
+
+            select {
+              max-width: 300px; 
+            }
+
+            #create-folder-button {
+              margin-top: -3px; 
+              margin-left: 10px;
+            }
+          }
+
+          &.current-working-directory {
+            ul.directories {
+              margin: 0px; 
+
+              li {
+                background-color: #333;
+                border-radius: 3px;
+                list-style: none outside none;
+                margin: 12px 0 0;
+                padding: 3px 12px;
+              }
+            } 
+          }
+        }
+
+
+      }
+    }
+
+    > #page-content
+    {
+      top: 96px !important;
+
+      div.split-view {
+        .second-view {
+          top: auto;
+        }
+
+        .first-view {
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+
+          &:before
+          {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 20px;
+            height: 10px;
+            background-image: asset-url("fade-top.png", image);
+            z-index: 1;
+          }
+
+          &:after
+          {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 20px;
+            height: 10px;
+            background-image: asset-url("fade-bottom.png", image);
+          }
+
+          ul.matrix-view
+          {
+            overflow: auto;
+            margin: 0;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

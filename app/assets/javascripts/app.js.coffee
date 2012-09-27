@@ -1,3 +1,16 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+class window.App extends Cartilage.Application
+
+  initialize: ->
+    # Collections
+    @photos ||= new App.Collections.Photos()
+   
+    # Shared Views 
+    App.contentView = new App.Views.ContentView()
+    App.emptyView = new App.Views.EmptyView( message: '' )
+
+    # Routers/Navigation
+    @initializeRouters()
+    Backbone.history.start()
+
+  initializeRouters: ->
+    new App.Routers.Photos()
