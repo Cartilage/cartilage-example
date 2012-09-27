@@ -2,7 +2,7 @@ class window.App.Routers.Photos extends App.Routers.Base
 
   routes:
     "": "index"
-    "/photos": "index"
+    "photos": "index"
 
   index: ->
     @switchTab('photos')

@@ -9,9 +9,6 @@ class window.App extends Cartilage.Application
     App.emptyView = new App.Views.EmptyView( message: '' )
 
     # Routers/Navigation
-    @initializeRouters()
-    Backbone.history.start()
-
-  initializeRouters: ->
     new App.Routers.Photos()
     new App.Routers.Cartilage()
+    Backbone.history.start()
