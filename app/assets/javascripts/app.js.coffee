@@ -14,3 +14,4 @@ class window.App extends Cartilage.Application
 
   initializeRouters: ->
     new App.Routers.Photos()
+    new App.Routers.Cartilage()

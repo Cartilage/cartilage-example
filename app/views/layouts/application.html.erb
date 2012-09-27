@@ -5,6 +5,7 @@
     <title>Cartilage for Backbone.js and Bootstrap</title>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <%= yield :javascript %>
     <%= csrf_meta_tags %>
     <script>
       window.log=function(){log.history=log.history||[];log.history.push(arguments);if(this.console){console.log(Array.prototype.slice.call(arguments))}};
@@ -30,7 +31,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li id="nav-photos" class="active"><a href="#photos">Photo Viewer</a></li>
-              <li id="nav-cartilage"><a href="#about">About Cartilage</a></li>
+              <li id="nav-about"><a href="#about">About Cartilage</a></li>
             </ul>
           </div>
 

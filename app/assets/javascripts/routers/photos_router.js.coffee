@@ -7,4 +7,4 @@ class window.App.Routers.Photos extends App.Routers.Base
   index: ->
     @switchTab('photos')
     @photosView = new App.Views.PhotosView
-    App.contentView.setView(@photosView)
+    App.contentView.show(@photosView)
