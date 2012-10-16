@@ -1,5 +1,9 @@
 class window.App.Views.PhotosView extends Cartilage.View
 
+  events:
+    'keypress input[name=searchTag]': 'searchPhotosOnEnter'
+    'click .btn.search': 'searchPhotos'
+
   prepare: ->
     # Configure Matrix View
     @matrixView = new Cartilage.Views.MatrixView {
@@ -38,3 +42,16 @@ class window.App.Views.PhotosView extends Cartilage.View
 
   selectionCleared: =>
     @splitView.position(0, { animated: true })
+
+  searchPhotosOnEnter: (event) ->
+    if event.keyCode != 13
+      return
+    @searchPhotos()
+
+  searchPhotos: ->
+    @collectionFetched = new $.Deferred
+
+    App.photos.fetch
+      data:
+        tags: $('#searchTag').val()
+
