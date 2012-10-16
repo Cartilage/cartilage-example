@@ -2,5 +2,5 @@
   <h1>Selected <%= photos.length %> photos</h1>
 <% } else if (typeof(photo) != 'undefined' && !photo.isNew()) { %>
   <h1><a href="<%= photo ? photo.get("link") : "#" %>"><%= photo ? photo.get("title") : "Name" %></a></h1>
-  <h2>Taken on <%= photo ? photo.get("date_taken").toDate().strftime("%B %d%o, %Y at %H:%MM %P") : "unknown" %></h2>
+  <h2>Taken on <%= photo ? (new Date(Date.parse(photo.get("date_taken")))) : "unknown" %></h2>
 <% } %>
