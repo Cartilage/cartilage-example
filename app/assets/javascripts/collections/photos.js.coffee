@@ -1,5 +1,6 @@
 class window.App.Collections.Photos extends Backbone.Collection
 
-  url: "http://api.flickr.com/services/rest/"
+  url: "/photos"
+
   model: App.Models.Photo
 

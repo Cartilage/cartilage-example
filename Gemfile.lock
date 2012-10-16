@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/Cartilage/cartilage.git
-  revision: 46524b185b0305124221cc03d84cc9f4534ed608
+  remote: git://github.com/rickbenavidez/cartilage
+  revision: ef0e130ada35c07a2f5a4242a25bf450ba699d35
   specs:
     cartilage (0.0.1)
       bootstrap-sass (~> 2.0.0)

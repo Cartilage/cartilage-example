@@ -6,5 +6,13 @@ class window.App.Routers.Photos extends App.Routers.Base
 
   index: ->
     @switchTab('photos')
-    @photosView = new App.Views.PhotosView
-    App.contentView.show(@photosView)
+
+    @collectionFetched = new $.Deferred
+
+    App.photos.fetch
+      success: =>
+        @collectionFetched.resolve()
+
+    @collectionFetched.done =>     
+      @photosView = new App.Views.PhotosView({ collection: App.photos })
+      App.contentView.show(@photosView)

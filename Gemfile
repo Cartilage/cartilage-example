@@ -26,7 +26,7 @@ gem 'jquery-rails'
 # Use Backbone, Bootstrap and Cartilage
 gem 'backbone-rails'
 gem 'bootstrap-sass'
-gem "cartilage", :git => 'git://github.com/Cartilage/cartilage.git'
+gem "cartilage", :git => 'git://github.com/rickbenavidez/cartilage' 
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

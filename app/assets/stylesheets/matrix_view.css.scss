@@ -1,0 +1,172 @@
+
+@import "cartilage/mixins";
+
+div.matrix-view {
+  ul {
+    li
+    {
+      width: auto !important;
+      background-color: #fff !important;
+      border: 0px !important;
+      padding: 0px !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      width: 200px;
+      height: 225px;
+      border-radius: 0px;
+      float: left;
+      margin: 20px;
+
+
+      &.matrix-view-item
+      {
+        position: relative;
+
+        width: 204px;
+        height: 225px;
+        background-color: white;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: solid 2px #fff;
+
+        &.selected {
+          border: 2px solid;
+          border-color: rgba(43, 122, 186, 0.25);
+
+          div.caption {
+            background-color: rgba(43, 122, 186, 0.25);
+            text-align:center;
+          }
+        }  
+
+        div.photo-view {
+          &.asset-type {
+            img {
+              margin: 25px 45px;
+              opacity: .1;
+              border-radius: 0px;
+            }
+          }
+        }
+
+        .photo-view
+        {
+          clip: rect(0px, 186px, 80px, 0px) !important;
+          overflow: hidden;
+          width: 200px;
+          height: 175px;
+          line-height: 155px;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          border-radius: 0px;
+          text-align: center;
+
+          -webkit-box-shadow: none !important;
+          -moz-box-shadow: none !important;
+          box-shadow: none !important;
+          border: 0px;
+
+          &::after {
+            content: ".";
+            visibility: hidden;
+          }
+
+          img
+          {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            overflow: hidden;
+            -khtml-user-drag: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+            border: 0px;
+            margin: 0 auto;
+            vertical-align: middle;
+          }
+        }
+
+        div.caption
+        {
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+
+          height: 50px;
+          line-height: 38px;
+          font-size: 130%;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #4E4E4E;
+
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400;
+          white-space: nowrap;
+          width: 100%;
+          background-color: rgb(245, 245, 245);
+          text-align:center;
+
+          span.file_name {
+            display: inline-block;
+            width: 175px;
+            text-align: center; 
+            overflow: hidden;
+            color: #123269;
+          }
+
+          span.file_path {
+            display: block;
+            margin-top: -22px;
+            color: #888;
+            font-size: 9px; 
+          }
+        }
+
+        div.badge
+        {
+          position: absolute;
+          right: -12px;
+          top: -12px;
+          padding: 1px 5px;
+
+          min-width: 14px;
+
+          border: 2px solid white;
+
+          @include gradient-vertical(rgb(242, 73, 81), rgb(196, 16, 25));
+          overflow: hidden;
+
+          color: white;
+          font-size: 11px;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+          text-align: center;
+
+          @include box-shadow(#{0 0 6px rgba(0, 0, 0, 0.35), inset 0 0 3px rgba(0, 0, 0, 0.5)});
+        }
+
+        div.loading-indicator-view
+        {
+          background: none;
+          border: none;
+          margin-top: -72px;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+
+        &.failed
+        {
+          div.image-view
+          {
+            background-image: asset-url("exclamation.png", image);
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ class window.App extends Cartilage.Application
 
   initialize: ->
     # Collections
-    @photos ||= new App.Collections.Photos()
+    App.photos = new App.Collections.Photos()
    
     # Shared Views 
     App.contentView = new App.Views.ContentView()
