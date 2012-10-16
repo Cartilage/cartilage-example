@@ -54,4 +54,3 @@ class window.App.Views.PhotosView extends Cartilage.View
     App.photos.fetch
       data:
         tags: $('#searchTag').val()
-
