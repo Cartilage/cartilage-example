@@ -1,16 +1,17 @@
 class window.App.Views.PhotoDetailsView extends Cartilage.View
 
   initialize: (options = {}) ->
+    super(options)
     @templateVariables = { photo: @model }
 
-  setFile: (file) ->
+  setPhoto: (photo) ->
     @collection = null
-    @model = file
-    @templateVariables = { photo: file }
+    @model = photo
+    @templateVariables = { photo: photo}
     @render()
 
-  setFiles: (files) ->
-    @collection = files
+  setPhotos: (photos) ->
+    @collection = photos
     @model = null
-    @templateVariables = { photos: files }
+    @templateVariables = { photos: photos }
     @render()
