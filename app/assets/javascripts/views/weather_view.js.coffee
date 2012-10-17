@@ -4,12 +4,14 @@ class window.App.Views.WeatherView extends Cartilage.View
     super(options)
 
   prepare: ->
-    log(@collection)
-    @citiesSourceListView = new Cartilage.Views.SourceListView {
+    @citiesFilterView = new App.Views.CitiesFilterView 
+    @citiesSourceListView = new App.Views.CitiesSourceListView {
       collection: @collection,
       itemView: App.Views.CitiesSourceListViewItem
+      headerView: @citiesFilterView
+      allowsSelection: yes
     }
-
+    App.citiesSourceListView = @citiesSourceListView
     @observe @citiesSourceListView, 'select', @switchCurrentView
 
     # Configure the Split View

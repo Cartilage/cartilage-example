@@ -72,6 +72,6 @@ class window.App.Routers.Base extends Backbone.Router
         @collectionFetched.resolve()
 
     @collectionFetched.done =>
-      @weatherView = new App.Views.WeatherView({ collection: App.cities })
+      @weatherView = new App.Views.WeatherView({ collection: new App.Collections.Cities(App.cities.models) })
       App.contentView.show(@weatherView)
 
