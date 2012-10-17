@@ -54,7 +54,7 @@ module Example
     config.assets.enabled = true
     config.reload_plugins = true
 
-    config.cache_store = :memory_store, :size => 1.megabytes
+    config.cache_store = :memory_store 
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
