@@ -5,15 +5,17 @@ class TweetsController < ApplicationController
   respond_to :json
 
   def index
-    # TODO: We wouldn't normally otherwise do this, but we're testing for now.
-    #       Should also cache api calls at regular intervals
-    http = ::Net::HTTP.new('search.twitter.com')
-    http.open_timeout = 15
-    http.read_timeout = 30 
+    # TODO: Simple memory caching so we don't source a lot of calls to 
+    #       the search API and get rate limited.  net-http is ugly, but 
+    #       it'll do for now
+    tweets = Rails.cache.fetch('tweets', :expires_in => 1.hour) {
+      http = ::Net::HTTP.new('search.twitter.com')
+      http.open_timeout = 15
+      http.read_timeout = 30 
 
-    response = http.get("/search.json?q=backbonejs")
-    tweets = JSON.parse(response.body)
-
-    return render :json => tweets['results']
+      response = http.get("/search.json?q=backbonejs")
+      JSON.parse(response.body)['results']
+    }
+    return render :json => tweets
   end
 end
