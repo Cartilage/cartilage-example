@@ -57,7 +57,7 @@ Example::Application.routes.draw do
   match '/tweets' => 'tweets#index', :via => :get
   match '/cities' => 'cities#index', :via => :get
   match '/forecast/:id' => 'forecast#show', :via => :get
-
+  match '/repos' => 'repos#show', :via => :get
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
