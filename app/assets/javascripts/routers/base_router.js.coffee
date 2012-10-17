@@ -3,6 +3,7 @@ class window.App.Routers.Base extends Backbone.Router
     "": "showAboutView"
     "matrixview": "showMatrixView"
     "listview": "showListView"
+    "sourcelistview": "showSourceListView"
     "about": "showAboutView"
 
   initialize: ->
@@ -54,3 +55,23 @@ class window.App.Routers.Base extends Backbone.Router
     @collectionFetched.done =>
       @tweetsView = new App.Views.TweetsView({ collection: App.tweets })
       App.contentView.show(@tweetsView)
+
+
+  showSourceListView: ->
+    @switchTab('sourcelistview')
+
+    @loadingIndicator = new Cartilage.Views.LoadingIndicatorView
+    @loadingIndicator.start()
+    App.contentView.show(@loadingIndicator)
+
+    @collectionFetched = new $.Deferred
+
+    App.cities = new App.Collections.Cities()
+    App.cities.fetch
+      success: =>
+        @collectionFetched.resolve()
+
+    @collectionFetched.done =>
+      @weatherView = new App.Views.WeatherView({ collection: App.cities })
+      App.contentView.show(@weatherView)
+

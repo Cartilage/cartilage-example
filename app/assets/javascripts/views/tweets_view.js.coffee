@@ -6,7 +6,8 @@ class window.App.Views.TweetsView extends Cartilage.View
     @tweetsList = new Cartilage.Views.ListView {
       collection: @collection,
       itemView: App.Views.TweetsListViewItem,
-      allowsSelection: true,
+      allowsSelection: yes,
+      allowsMultipleSelection: yes
     }
 
     @addSubview @tweetsList, (@$ "#page-content")

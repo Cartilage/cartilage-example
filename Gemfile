@@ -7,6 +7,7 @@ gem 'rails', '3.2.3'
 
 gem "pg", :group => :production
 gem 'sqlite3', :group => :development
+gem 'feedzirra'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,8 +27,8 @@ gem 'jquery-rails'
 # Use Backbone, Bootstrap and Cartilage
 gem 'backbone-rails'
 gem 'bootstrap-sass'
-gem "cartilage", :git => 'git://github.com/rickbenavidez/cartilage' 
-
+gem "cartilage", :path => '/Users/rickb/apps/cartilage' #:git => 'git://github.com/Cartilage/cartilage.git'
+gem 'awesome_print'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
