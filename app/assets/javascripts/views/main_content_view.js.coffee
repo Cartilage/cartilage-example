@@ -1,5 +1,5 @@
 
-class window.Example.Views.MainContentView extends Cartilage.View
+class window.App.Views.MainContentView extends Cartilage.View
 
   el: "#content"
 
