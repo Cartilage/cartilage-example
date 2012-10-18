@@ -1,0 +1,79 @@
+// Cartilage Support ---------------------------------------------------------
+
+@import "cartilage/mixins";
+@import "cartilage/variables";
+
+
+.todos-view {
+  .standard-section {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+
+    div {
+      padding: 0px;
+    }
+
+    .list-view {
+      ul {
+        li {
+          min-height: 50px;
+          &.completed {
+            opacity: .7;
+            .title {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+
+    // leave room for header with 50px;
+    .scrollable-section {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 50px;
+      left: 0px; 
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .context-actions {
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      position: absolute;
+    }
+
+    .section-actions {
+      border-top: 0.1em solid #bbb;
+      @include gradient-vertical(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.05));
+      height: 25px;
+
+      ul {
+        margin-left: 0px;
+        line-height: 25px;
+
+        li {
+          border-right: solid 1px #B8B8B8;
+          float: left;
+          list-style-type: none;
+          padding: 0px 10px 0px 10px;
+          line-height: 25px;
+
+          i {
+            opacity: .7;
+          }
+        }
+      }
+    }
+
+     &.with-actions {
+        bottom: 25px;
+    }
+  }
+}

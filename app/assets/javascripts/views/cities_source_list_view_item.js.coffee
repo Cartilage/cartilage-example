@@ -1,0 +1,1 @@
+class window.App.Views.CitiesSourceListViewItem extends Cartilage.Views.SourceListViewItem

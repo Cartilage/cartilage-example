@@ -1,0 +1,97 @@
+.photo-details-view
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  overflow: hidden;
+  padding: 20px;
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: rgb(195, 195, 195);
+  border-color: rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(240, 240, 240);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f3f4;
+
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  h1, h2
+  {
+    position: relative;
+    font-size: 18px;
+    line-height: 36px;
+    height: 36px;
+    margin-top: -6px;
+    float: left;
+    font-weight: normal;
+  }
+
+  h1
+  {
+    color: #555;
+    max-width: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 20px;
+  }
+
+  h2
+  {
+    color: #888;
+    font-weight: normal;
+    padding-left: 20px;
+
+    &:before
+    {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #ddd;
+    }
+
+    &:after
+    {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: white;
+    }
+  }
+
+  a
+  {
+    color: inherit;
+  }
+
+  ul.buttons
+  {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -14px;
+
+    list-style: none;
+
+    li
+    {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+
+}

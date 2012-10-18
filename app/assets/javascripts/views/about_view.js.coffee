@@ -1,2 +1,2 @@
 
-class window.Example.Views.AboutView extends Cartilage.View
+class window.App.Views.AboutView extends Cartilage.View

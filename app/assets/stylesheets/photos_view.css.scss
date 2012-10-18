@@ -112,7 +112,7 @@
 
       div.split-view {
         .second-view {
-          top: auto;
+          max-height: 65px;
         }
 
         .first-view {
@@ -129,6 +129,8 @@
             right: 20px;
             height: 10px;
             background-image: asset-url("fade-top.png", image);
+            background-repeat: repeat-x;
+            background-position: 0px 0px;
             z-index: 1;
           }
 
@@ -141,6 +143,8 @@
             right: 20px;
             height: 10px;
             background-image: asset-url("fade-bottom.png", image);
+            background-repeat: repeat-x;
+            background-position: 0px 0px;
           }
 
           ul.matrix-view
