@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/rickb/apps/cartilage
+GIT
+  remote: git://github.com/Cartilage/cartilage.git
+  revision: f8db5fa41f27d3d8021b2eb7206498f5f531b450
   specs:
     cartilage (0.0.1)
       bootstrap-sass (~> 2.0.0)
