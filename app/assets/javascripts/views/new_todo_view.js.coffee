@@ -17,5 +17,5 @@ class window.App.Views.NewTodoView extends Cartilage.Views.ModalView
 
   createTodo: (e) ->
     todoText = $('#todo').val()
-    @collection.add(new App.Models.Todo({ id: _.random(100), title: todoText }))
+    @collection.add(new App.Models.Todo({ title: todoText }))
     @hide()
