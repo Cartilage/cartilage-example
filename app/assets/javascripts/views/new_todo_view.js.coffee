@@ -12,8 +12,9 @@ class window.App.Views.NewTodoView extends Cartilage.Views.ModalView
 
   createTodoOnEnter: (e) ->
     if e.keyCode != 13
-      return
+      return true
     @createTodo()
+    return false
 
   createTodo: (e) ->
     todoText = $('#todo').val()
