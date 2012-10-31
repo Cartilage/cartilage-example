@@ -2,7 +2,7 @@ class window.App.Views.NewTodoView extends Cartilage.Views.ModalView
 
   events: _.extend {
     "click #create-todo": "createTodo"
-    'keypress input[name=todo]': 'createTodoOnEnter'
+    'keypress input[name=todo]': 'handleSpecialKeys'
     "click .cancel": "hide"
   }, Cartilage.Views.ModalView.prototype.events
 
@@ -10,7 +10,9 @@ class window.App.Views.NewTodoView extends Cartilage.Views.ModalView
     @parentView = options['parentView']
     super(options)
 
-  createTodoOnEnter: (e) ->
+  handleSpecialKeys: (e) ->
+    if e.keyCode == 27
+      @hide()
     if e.keyCode != 13
       return true
     @createTodo()
@@ -18,5 +20,6 @@ class window.App.Views.NewTodoView extends Cartilage.Views.ModalView
 
   createTodo: (e) ->
     todoText = $('#todo').val()
-    @collection.add(new App.Models.Todo({ title: todoText }))
+    if todoText
+      @collection.add(new App.Models.Todo({ title: todoText }))
     @hide()
