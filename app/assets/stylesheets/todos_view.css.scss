@@ -20,7 +20,8 @@
     .list-view {
       ul {
         li {
-          min-height: 50px;
+          height: 50px;
+          min-height: 0;
           &.completed {
             opacity: .7;
             .title {
@@ -56,17 +57,29 @@
 
       ul {
         margin-left: 0px;
+        padding-left: 15px;
         line-height: 25px;
 
+        li:first-child {
+          border-left: solid 1px #B8B8B8;
+        }
         li {
           border-right: solid 1px #B8B8B8;
           float: left;
           list-style-type: none;
           padding: 0px 10px 0px 10px;
           line-height: 25px;
+          cursor: pointer;
 
           i {
             opacity: .7;
+          }
+        }
+        li.inactive {
+          cursor: default;
+
+          i {
+            opacity: .3;
           }
         }
       }
