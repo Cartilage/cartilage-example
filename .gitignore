@@ -20,3 +20,9 @@
 # Ignore editor-related files.
 *.sublime*
 *.tmproj
+
+# RVM
+.rvmrc
+
+# Pow
+.powrc
