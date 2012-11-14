@@ -1,4 +1,4 @@
-class window.App.Models.Forecast extends Backbone.Model
+class window.App.Models.Forecast extends Cartilage.Model
 
   url: ->
-    '/forecast/' + @get('id')
+    "/forecast/#{@id}"

@@ -10,7 +10,7 @@ class window.App.Views.WatchersView extends Cartilage.View
         new Cartilage.Models.Segment({ maximum: 20000, title: "10,001-20,000" }),
         new Cartilage.Models.Segment({ maximum: 25000, title: "20,001-25,000" })
       ])
-      value: @model.get('watchers')
+      value: @model.watchers
     }
 
     @addSubview @usageBarView, (@$ '#repository-watchers-usage-bar-view')

@@ -6,8 +6,8 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "pg", :group => :production
-gem 'sqlite3', :group => :development
+gem 'pg', group: :production
+gem 'sqlite3', group: :development
 gem 'feedzirra'
 
 # Gems used only for assets and not required
@@ -18,7 +18,7 @@ group :assets do
   gem 'ejs'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', platform: :ruby
 
   gem 'uglifier'
 end
@@ -28,7 +28,7 @@ gem 'jquery-rails'
 # Use Backbone, Bootstrap and Cartilage
 gem 'backbone-rails'
 gem 'bootstrap-sass'
-gem "cartilage", :git => 'git://github.com/Cartilage/cartilage.git'
+gem 'cartilage', git: 'git://github.com/jsmecham/cartilage.git', branch: 'model-properties'
 gem 'awesome_print'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
