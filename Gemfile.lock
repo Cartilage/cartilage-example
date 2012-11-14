@@ -1,12 +1,15 @@
 GIT
-  remote: git://github.com/Cartilage/cartilage.git
-  revision: b0baa06087d5a06e7e98d684bebd051bd411f873
+  remote: git://github.com/jsmecham/cartilage.git
+  revision: aa6eee98430100a1d2c72d77fa0f8a1e37b400d5
+  branch: model-properties
   specs:
     cartilage (0.0.1)
       backbone-rails (~> 0.9.2)
       bootstrap-sass (~> 2.1.0.1)
+      coffee-rails (~> 3.2.2)
       coffee-script (~> 2.2.0)
       ejs (~> 1.1.1)
+      jquery-rails (~> 2.1.3)
       rails (~> 3.1)
       sass-rails (~> 3.2.5)
 
@@ -83,7 +86,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
-    multi_json (1.3.6)
+    multi_json (1.3.7)
     nokogiri (1.4.7)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -109,10 +112,10 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2.2)
+    rake (10.0.0)
     rdoc (3.12)
       json (~> 1.4)
-    sass (3.2.1)
+    sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -131,7 +134,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.34)
+    tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)

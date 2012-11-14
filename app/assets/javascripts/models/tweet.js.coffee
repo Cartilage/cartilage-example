@@ -1,2 +1,2 @@
-class window.App.Models.Tweet extends Backbone.Model
+class window.App.Models.Tweet extends Cartilage.Model
 

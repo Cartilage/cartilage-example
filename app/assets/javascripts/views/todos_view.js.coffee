@@ -8,7 +8,7 @@ class window.App.Views.TodosView extends Cartilage.View
   initialize: (options) ->
     super(options)
     @collection = new App.Collections.Todos([
-      new App.Models.Todo({ id: 1, title: 'Build To-do App', completed: yes }), 
+      new App.Models.Todo({ id: 1, title: 'Build To-do App', completed: yes }),
       new App.Models.Todo({ id: 2, title: 'Finish Cartilage website', completed: no }),
       new App.Models.Todo({ id: 3, title: 'Review outstanding issues in github', completed: no })
     ])
@@ -48,5 +48,5 @@ class window.App.Views.TodosView extends Cartilage.View
   # Need to consider observing 'change' on the model
   # so ListView can update itself
   toggleSelectedTodos: (e) ->
-    _.each @todosList.selected.models, (model) => model.set({ completed: !model.get('completed') })
+    _.each @todosList.selected.models, (model) => (model.completed = !model.completed)
     @todosList.update()

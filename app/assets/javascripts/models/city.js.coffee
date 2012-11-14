@@ -1,8 +1,8 @@
-class window.App.Models.City extends Backbone.Model
+class window.App.Models.City extends Cartilage.Model
 
   initialize: ->
     @weather = new App.Models.Forecast
-      id: @get('id')
+      id: @id
 
   match: (expression) ->
-    @get("name").match(///#{expression}///i)?
+    @name.match(///#{expression}///i)?
