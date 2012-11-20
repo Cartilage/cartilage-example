@@ -17,8 +17,6 @@
       right: 0;
       height: 48px;
 
-      @include user-select(none);
-
       &:after
       {
         content: "";

@@ -20,3 +20,4 @@
 # Ignore editor-related files.
 *.sublime*
 *.tmproj
+.idea/
