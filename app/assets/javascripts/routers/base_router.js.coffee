@@ -4,7 +4,7 @@ class window.App.Routers.Base extends Backbone.Router
     "matrixview": "showMatrixView"
     "listview": "showListView"
     "sourcelistview": "showSourceListView"
-    "barusageview": "showBarUsageView"
+    "usagebarview": "showUsageBarView"
     "todosview": "showTodosView"
     "about": "showAboutView"
 
@@ -85,26 +85,16 @@ class window.App.Routers.Base extends Backbone.Router
         @weatherView = new App.Views.WeatherView({ collection: new App.Collections.Cities(App.cities.models) })
         App.contentView.show(@weatherView)
 
-  showBarUsageView: ->
-    @switchTab('barusageview')
+  showUsageBarView: ->
+    @switchTab('usagebarview')
 
-    if @watchersView
-      App.contentView.show(@watchersView)
+    if @usageBarView
+      App.contentView.show(@usageBarView)
     else
-      @loadingIndicator = new Cartilage.Views.LoadingIndicatorView
-      @loadingIndicator.start()
-      App.contentView.show(@loadingIndicator)
-
-      @modelFetched = new $.Deferred
-      @repository = new App.Models.Repository
-      @repository.fetch
-        success: =>
-          @modelFetched.resolve()
-
-      @modelFetched.done =>
-        @watchersView = new App.Views.WatchersView
-          model: @repository
-        App.contentView.show(@watchersView)
+      @hours = new App.Models.Hours
+      @usageBarView = new App.Views.UsageBarDemoView
+        model: @hours
+      App.contentView.show(@usageBarView)
 
   showTodosView: ->
     @switchTab('todosview')

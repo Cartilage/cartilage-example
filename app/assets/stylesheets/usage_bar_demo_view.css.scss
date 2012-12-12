@@ -6,13 +6,45 @@
 
 // Overview View -------------------------------------------------------------
 
-.watchers-view
+.usage-bar-demo-view
 {
 
-  // Usages Section ----------------------------------------------------------
-  #repository-watchers
+  > #controls
   {
-    #repository-watchers-usage-bar-view
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: 32px;
+    padding: 0 2em;
+
+    &:after
+    {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-top: 1px solid rgb(196, 198, 200);
+      border-top: 1px solid rgba(0, 0, 0, 0.125);
+      border-bottom: 1px solid rgb(239, 241, 241);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    input {
+      float: right;
+    }
+  }
+
+  > #page-content {
+    top: 96px !important;
+  }
+
+  // Usages Section ----------------------------------------------------------
+  #hours-elapsed
+  {
+    #hours-elapsed-usage-bar-view
     {
       position: static;
       margin: 20px;
@@ -26,8 +58,9 @@
     footer
     {
       padding: 0 10px 10px 10px;
+      font-size: 10px;
 
-      #repository-watchers-legend-view
+      #hours-elapsed-legend-view
       {
         text-align: center;
 
@@ -44,8 +77,7 @@
             display: inline-block;
             line-height: 8px;
             margin: 10px;
-            width: 120px;
-            font-size: 10px;
+            width: 160px;
             text-align: left;
 
             span
@@ -57,6 +89,11 @@
             }
           }
         }
+      }
+
+      p {
+        text-align: right;
+        font-style: italic;
       }
     }
   }
