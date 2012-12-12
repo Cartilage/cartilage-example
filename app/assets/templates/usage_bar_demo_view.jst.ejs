@@ -1,0 +1,32 @@
+
+<div id="page-header">
+  <h1>UsageBarView</h1>
+</div>
+
+<div id="controls">
+  <input id="hours-input" type="range" min="0" max="<%= hours.get('year_hours') %>" value="<%= hours.get('num_hours') %>"/>
+</div>
+
+<div id="page-content">
+  <div id="hours-elapsed" class="usages-section standard-section">
+    <header>
+      <h2 id="num-hours" class="pull-right"><%= hours.get('num_hours') %></h2>
+      <h1>Hours Elapsed in <%= hours.get('year') %>*</h1>
+    </header>
+    <div id="hours-elapsed-usage-bar-view">
+      <!-- Usage Bar View gets inserted here -->
+    </div>
+    <footer>
+      <div id="hours-elapsed-legend-view">
+        <ul>
+          <li><span class="well" style="background-color: #6ba2d4"></span>Winter (0-1944)</li>
+          <li><span class="well" style="background-color: #a765a2"></span>Spring (1945-4152)</li>
+          <li><span class="well" style="background-color: #f69062"></span>Summer (4153-6360)</li>
+          <li><span class="well" style="background-color: #8ccc64"></span>Autumn (6361-8544)</li>
+          <li><span class="well" style="background-color: #c26bb4"></span>Winter (8545-<%= hours.get('year_hours') %>)</li>
+        </ul>
+      </div>
+      <p>* Northern Hemisphere seasons; does not account for timezone; your mileage may vary; please: no wagering or astrology.</p>
+    </footer>
+  </div>
+</div>
